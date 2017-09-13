@@ -12,8 +12,6 @@ ADD oracle-xe-universal_10.2.0.1-1.1_i386.debaa /
 ADD oracle-xe-universal_10.2.0.1-1.1_i386.debab /
 ADD oracle-xe-universal_10.2.0.1-1.1_i386.debac /
 
-cat /oracle-xe-universal_10.2.0.1-1.1_i386.deba* > /oracle-xe-universal_10.2.0.1-1.1_i386.deb
-
 RUN dpkg --add-architecture i386 && \
     apt-get update && apt-get install -y \
        bc:i386 \
@@ -28,6 +26,7 @@ RUN dpkg --add-architecture i386 && \
     sed 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so@g' -i /etc/pam.d/sshd && \
     echo "export VISIBLE=now" >> /etc/profile && \
     ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone && \
+    cat /oracle-xe-universal_10.2.0.1-1.1_i386.deba* > /oracle-xe-universal_10.2.0.1-1.1_i386.deb
     dpkg -i /oracle-xe-universal_10.2.0.1-1.1_i386.deb && \
     rm /oracle-xe-universal_10.2.0.1-1.1_i386.deb && \
     printf 8080\\n1521\\noracle\\noracle\\ny\\n | /etc/init.d/oracle-xe configure && \
