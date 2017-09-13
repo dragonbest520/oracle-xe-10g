@@ -6,7 +6,7 @@ dragonbest520/oracle-xe-10g
 
 Oracle Express Edition 10g Release 2 (10.2.0.1) 32-bit on Debian 7.0 Wheezy.
 
-The default characterset is ZHS16GBK and timezone is Asia/Shanghai.
+**The default characterset is ZHS16GBK and timezone is Asia/Shanghai.**
 
 
 ### Installation
