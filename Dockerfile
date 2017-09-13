@@ -28,7 +28,7 @@ RUN dpkg --add-architecture i386 && \
     ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone && \
     cat /oracle-xe-universal_10.2.0.1-1.1_i386.deba* > /oracle-xe-universal_10.2.0.1-1.1_i386.deb && \ 
     dpkg -i /oracle-xe-universal_10.2.0.1-1.1_i386.deb && \
-    rm /oracle-xe-universal_10.2.0.1-1.1_i386.deb && \
+    rm /oracle-xe-universal_10.2.0.1-1.1_i386.deb* && \
     printf 8080\\n1521\\noracle\\noracle\\ny\\n | /etc/init.d/oracle-xe configure && \
     echo 'export ORACLE_HOME=/usr/lib/oracle/xe/app/oracle/product/10.2.0/server' >> /etc/bash.bashrc && \
     echo 'export LD_LIBRARY_PATH=$ORACLE_HOME/lib' >> /etc/bash.bashrc && \
