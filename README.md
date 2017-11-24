@@ -26,7 +26,7 @@ If the container restart or redeployed, the data is still in the volume.
 Connect database with following setting:
 ```
 hostname: localhost
-port: 49161
+port: 1521
 sid: xe
 username: system
 password: oracle
